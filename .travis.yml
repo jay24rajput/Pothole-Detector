@@ -1,0 +1,10 @@
+language: python
+python: 3.6
+
+install:
+- pip3 install opencv-python
+
+script:
+- git clone https://github.com/jay24rajput/Pothole-Detector.git
+- cd Pothole-Detector
+- python detect.py
