@@ -5,16 +5,6 @@ import matplotlib.pyplot as plt
 img=cv2.imread('pothole.jpg',cv2.IMREAD_COLOR)
 img = cv2.resize(img, (500, 500))
 
-# img=cv2.cvtColor(img, cv2.COLOR_BGR2HSV) 
-
-# lower_red = np.array([40,150,50])
-# upper_red = np.array([255,255,180])
-
-# mask = cv2.inRange(img, lower_red, upper_red)
-# res = cv2.bitwise_and(img,img, mask= mask)
-
-
-
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 blur = cv2.GaussianBlur(gray,(5,5),30)
 
@@ -60,4 +50,4 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 
-#Authored by Jay Rajput
+#Authored by Jay Rajput 
