@@ -12,17 +12,6 @@ ret,thresh = cv2.threshold(blur,125,255,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)
 _,contours,_= cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 # _,contours,_= cv2.findContours(thresh,1, 2)
 _, contours, _ = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
-# print(contours)
-
-# cnt = contours[0]
-# M = cv2.moments(cnt)
-# print(M)
-
-# perimeter = cv2.arcLength(cnt,True)
-# # print (perimeter)
-
-# area = cv2.contourArea(cnt)
-# print (area)
 
 for contour in contours:
     area = cv2.contourArea(contour)
