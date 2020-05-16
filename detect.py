@@ -20,18 +20,6 @@ for contour in contours:
     if area > 10000:
         cv2.drawContours(img, contour, -1, (0, 255, 0), 3)
 
-# for c in contours:
-#     rect = cv2.boundingRect(c)
-#     if rect[2] < 100 or rect[3] < 100: continue
-#     #print cv2.contourArea(c)
-#     x,y,w,h = rect
-#     cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),8)
-#     cv2.putText(img,'',(x+w+40,y+h),0,2.0,(0,255,0))
-    
-    # plt.title("Moth Detected Pothole Image")
-    # # plt.imshow(img)
-    # # plt.show()
-
 cv2.imshow('otsu',thresh)
 cv2.imshow('img',img)
 # cv2.imshow('res',res)
